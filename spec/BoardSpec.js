@@ -1,8 +1,8 @@
 describe("Board", function() {
 
-  beforeEach(
+  beforeEach(function() {
     board = new Board();
-  );
+  });
 
   describe("Board functions", function() {
 
