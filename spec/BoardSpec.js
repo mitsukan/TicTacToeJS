@@ -12,6 +12,11 @@ describe("Board", function() {
       expect(board.grid).toEqual([["","",""],["","",""],["","",""]]);
     });
 
+    it("Change empty box to X", function() {
+      board.playerX(1,1)
+      expect(board.grid).toEqual([["","",""],["","X",""],["","",""]]);
+    });
+
   });
 
 });
