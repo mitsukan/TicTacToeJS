@@ -28,6 +28,12 @@ describe("Board", function() {
       expect(board.grid).toEqual([["","",""],["","O",""],["","",""]]);
     });
 
+    it("Player O cannot overwrite Player X's move", function() {
+      board.MoveX(1,1);
+      board.MoveO(1,1);
+      expect(board.grid).toEqual([["","",""],["","X",""],["","",""]]);
+    });
+
   });
 
 });

@@ -3,9 +3,16 @@ Board = function(){
 };
 
 Board.prototype.MoveX = function(array, subarray) {
-  this.grid[array][subarray] = "X";
+  if(this.grid[array][subarray] == "X" || this.grid[array][subarray] == "O"){
+    console.log("cannot overwrite");
+  } else{this.grid[array][subarray] = "X";
+}
+
 };
 
 Board.prototype.MoveO = function(array, subarray) {
-  this.grid[array][subarray] = "O";
+  if(this.grid[array][subarray] == "X" || this.grid[array][subarray] == "O"){
+    console.log("cannot overwrite");
+  } else{this.grid[array][subarray] = "O";
+}
 };
