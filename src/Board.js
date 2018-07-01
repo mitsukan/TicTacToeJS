@@ -16,3 +16,15 @@ Board.prototype.MoveO = function(array, subarray) {
     } else{this.grid[array][subarray] = "O";
   }
 };
+
+Board.prototype.wipe = function() {
+  var array;
+  var subarray;
+  //iterations through array
+  for (array=0; array <= 2; array++){
+    //iterations through subarray
+    for (subarray = 0; subarray <=2; subarray++){
+      this.grid[array][subarray] = ""
+    }
+  }
+};
