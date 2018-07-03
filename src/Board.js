@@ -28,3 +28,5 @@ Board.prototype.wipe = function() {
     }
   }
 };
+
+// Board.prototype.CheckForWin = function(){};
