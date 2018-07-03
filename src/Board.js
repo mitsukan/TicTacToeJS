@@ -1,5 +1,6 @@
 Board = function(){
-  this.grid = [["","",""],["","",""],["","",""]]
+  this.grid = [["","",""],["","",""],["","",""]];
+  this.winCondition = false;
 };
 
 Board.prototype.MoveX = function(array, subarray) {
@@ -31,4 +32,31 @@ Board.prototype.wipe = function() {
   console.log("Board RESET!");
 };
 
-// Board.prototype.CheckForWin = function(){};
+Board.prototype.WinCheckX = function() {
+  var rows = [[["X","X","X"],["","",""],["","",""]],
+  [["","",""],["X","X","X"],["","",""]],
+  [["","",""],["","",""],["X","X","X"]]]
+
+  var columns = [[["X","",""],["X","",""],["X","",""]],
+  [["","X",""],["","X",""],["","X",""]],
+  [["","","X"],["","","X"],["","","X"]]]
+
+  var diagonals = [[["X","",""],["","X",""],["","","X"]],
+  [["","","X"],["","X",""],["X","",""]]]
+
+
+  for(var testArr = 0; testArr <= 2; testArr++){
+    if(String(this.grid) === String(rows[testArr])) {
+      this.winCondition = true;
+    }
+    if(String(this.grid) === String(columns[testArr])) {
+      this.winCondition = true;
+    }
+  }
+  for(var testArr = 0; testArr <= 1; testArr++){
+    if(String(this.grid) === String(diagonals[testArr])) {
+      this.winCondition = true;
+    }
+  }
+
+};
