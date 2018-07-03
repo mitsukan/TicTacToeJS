@@ -7,7 +7,7 @@ Board.prototype.MoveX = function(array, subarray) {
     console.log("cannot overwrite");
     } else{this.grid[array][subarray] = "X";
   }
-
+  console.log("X Moved.");
 };
 
 Board.prototype.MoveO = function(array, subarray) {
@@ -15,6 +15,7 @@ Board.prototype.MoveO = function(array, subarray) {
     console.log("cannot overwrite");
     } else{this.grid[array][subarray] = "O";
   }
+  console.log("O Moved.");
 };
 
 Board.prototype.wipe = function() {
@@ -27,6 +28,7 @@ Board.prototype.wipe = function() {
       this.grid[array][subarray] = ""
     }
   }
+  console.log("Board RESET!");
 };
 
 // Board.prototype.CheckForWin = function(){};
