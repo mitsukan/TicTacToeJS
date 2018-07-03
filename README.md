@@ -1,5 +1,8 @@
 # Tic Tac Toe Tech Test
 
+Clone the repo and open `index.html`.
+Current win condition prompts currently come out of the console.
+
 ### Planning
 
 Tic tac toe is a game that has a 3 X 3 grid, where two players fill in "X" or "O" in turns.
