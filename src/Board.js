@@ -48,14 +48,17 @@ Board.prototype.WinCheckX = function() {
   for(var testArr = 0; testArr <= 2; testArr++){
     if(String(this.grid) === String(rows[testArr])) {
       this.winCondition = true;
+      console.log("X WON!");
     }
     if(String(this.grid) === String(columns[testArr])) {
       this.winCondition = true;
+      console.log("X WON!");
     }
   }
   for(var testArr = 0; testArr <= 1; testArr++){
     if(String(this.grid) === String(diagonals[testArr])) {
       this.winCondition = true;
+      console.log("X WON!");
     }
   }
 
